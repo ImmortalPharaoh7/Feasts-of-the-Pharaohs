@@ -1,0 +1,15 @@
+[
+{
+  "modid": "fotp",
+  "name": "Feasts of the Pharaohs",
+  "description": "Summons amazing Egyptian dishes and food",
+  "version": "1.0",
+  "mcversion": "1.10.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ImmortalPharaoh7"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
