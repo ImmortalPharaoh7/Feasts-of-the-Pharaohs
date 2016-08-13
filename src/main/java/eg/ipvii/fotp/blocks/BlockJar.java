@@ -17,7 +17,7 @@ import java.util.List;
 public class BlockJar extends Block {
 
     //1 / 16 = 0.0625
-    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 5, 0, 0.0625 * 5, 0.0625 * 13,0.0625 * 12, 0.0625 * 13);
+    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12,0.0625 * 12, 0.0625 * 12);
     private static final AxisAlignedBB COLLISION_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12,0.0625 * 11, 0.0625 * 12);
 
     public BlockJar(){

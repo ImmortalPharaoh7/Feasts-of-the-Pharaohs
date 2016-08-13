@@ -5,6 +5,7 @@ import eg.ipvii.fotp.init.ModCrafting;
 import eg.ipvii.fotp.init.ModItems;
 import eg.ipvii.fotp.proxy.CommonProxy;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -19,6 +20,8 @@ public class FotPMod {
 
     @SidedProxy(serverSide = References.SERVER_PROXY_CLASS, clientSide = References.CLIENT_PROXY_CLASS)
     public static CommonProxy proxy;
+
+    public static final CreativeTabs CREATIVE_TAB = new FoodTab();
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

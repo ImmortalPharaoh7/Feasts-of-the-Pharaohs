@@ -9,9 +9,11 @@ public class References {
     public static final String CLIENT_PROXY_CLASS = "eg.ipvii.fotp.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "eg.ipvii.fotp.proxy.ServerProxy";
 
-    public static enum FotPItems{
-        FUL("ful", "ItemFul"),
-        PLAINSANDWICH("plainsandwich", "ItemPlainSandwich");
+    public enum FotPItems{
+        FUL("ful", "itemful"),
+        PLAINSANDWICH("plainsandwich", "itemplainsandwich"),
+        FULSANDWICH("fulsandwich", "itemfulsandwich"),
+        BEANS("beans", "itembeans");
 
         private String unlocalizedName;
         private String registryName;
@@ -30,9 +32,10 @@ public class References {
             return registryName;
         }
     }
-    public static enum FotPBlocks{
-        MUD("mud", "BlockMud"),
-        JAR("jar", "BlockJar");
+    public enum FotPBlocks{
+        MUD("mud", "blockmud"),
+        JAR("jar", "blockjar"),
+        BEANSCROP("beanscrop", "cropbeans");
 
         private String unlocalizedName;
         private String registryName;

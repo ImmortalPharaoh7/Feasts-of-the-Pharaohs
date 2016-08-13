@@ -1,5 +1,9 @@
 item.ful.name=Ful
 item.plainsandwich.name=Plain Sandwich
+item.fulsandwich.name=Ful Sandwich
+item.beans.name=Beans
 
 tile.mud.name=Mud
 tile.jar.name=Jar
+
+itemGroup.tabFood=Egyptian Food

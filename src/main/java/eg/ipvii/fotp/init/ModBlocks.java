@@ -1,5 +1,6 @@
 package eg.ipvii.fotp.init;
 
+import eg.ipvii.fotp.blocks.BlockCropBeans;
 import eg.ipvii.fotp.blocks.BlockJar;
 import eg.ipvii.fotp.blocks.BlockMud;
 import net.minecraft.block.Block;
@@ -13,16 +14,19 @@ public class ModBlocks {
 
     public static Block mud;
     public static Block jar;
+    public static Block beanscrop;
 
     public static void init(){
         mud = new BlockMud();
         jar = new BlockJar();
+        beanscrop = new BlockCropBeans();
 
     }
 
     public static void register(){
         registerBlock(mud);
         registerBlock(jar);
+        registerBlock(beanscrop);
 
     }
 
@@ -35,6 +39,8 @@ public class ModBlocks {
 
     public static void registerRenders(){
         registerRender(mud);
+        registerRender(jar);
+        registerRender(beanscrop);
 
     }
     private static void registerRender(Block block){
