@@ -1,5 +1,27 @@
 item.ful.name=Ful
 item.plainsandwich.name=Plain Sandwich
+item.fulsandwich.name=Ful Sandwich
+item.beans.name=Fava Beans
+item.cumin.name=Cumin
+item.garlic.name=Garlic
+item.rawpastrami.name=Raw Pastrami
+item.pastrami.name=Pastrami
+item.mudball.name=Mud Ball
+item.earthenware.name=Earthenware
+item.mortarandpestle.name=Mortar and Pestle
+item.okra.name=Okra
+item.okraseeds.name=Okra Seeds
+item.redpepper.name=Red Pepper
+item.redpepperseeds.name=Red Pepper Seeds
+item.earthenwarebowl.name=Earthenware Bowl
+item.earthenwarestick.name=Earthenware Stick
+item.rice.name=Rice
+item.riceseeds.name=Rice Seeds
+item.tomato.name=Tomato
+item.tomatoseed.name=Tomato Seeds
 
 tile.mud.name=Mud
 tile.jar.name=Jar
+
+itemGroup.tabFood=Egyptian Food
+itemGroup.tabComponents=Components

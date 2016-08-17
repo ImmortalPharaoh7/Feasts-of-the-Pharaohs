@@ -10,7 +10,6 @@ public class ClientProxy implements CommonProxy {
     public void init() {
         ModItems.registerRenders();
         ModBlocks.registerRenders();
-        ModelLoader.registerItemVariants(Item.getItemFromBlock(ModBlocks.jar),  ModBlocks.jar.getRegistryName());
 
     }
 }

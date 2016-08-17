@@ -1,10 +1,10 @@
 package eg.ipvii.fotp;
 
-import eg.ipvii.fotp.init.ModBlocks;
-import eg.ipvii.fotp.init.ModCrafting;
-import eg.ipvii.fotp.init.ModItems;
+import eg.ipvii.fotp.init.*;
 import eg.ipvii.fotp.proxy.CommonProxy;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -20,14 +20,19 @@ public class FotPMod {
     @SidedProxy(serverSide = References.SERVER_PROXY_CLASS, clientSide = References.CLIENT_PROXY_CLASS)
     public static CommonProxy proxy;
 
+    public static final CreativeTabs FOODTAB = new FoodTab();
+    public static final CreativeTabs COMPONENTSTAB = new ComponentsTab();
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        ModItems.init();
-        ModItems.register();
-
         ModBlocks.init();
         ModBlocks.register();
 
+        ModItems.init();
+        ModItems.register();
+
+        MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
+        MinecraftForge.EVENT_BUS.register(new GrassDropsHandler());
     }
 
     @Mod.EventHandler
