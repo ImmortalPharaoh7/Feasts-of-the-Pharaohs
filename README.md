@@ -1,2 +1,2 @@
 # Feasts-of-the-Pharaohs
-This is a test mod
+This mod adds Egyptian food as well as fancy ways to prepare them (WIP).
