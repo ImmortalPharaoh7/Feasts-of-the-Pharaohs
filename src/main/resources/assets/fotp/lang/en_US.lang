@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 item.ful.name=Ful
 item.plainsandwich.name=Plain Sandwich
 item.fulsandwich.name=Ful Sandwich
@@ -25,3 +26,14 @@ tile.jar.name=Jar
 
 itemGroup.tabFood=Egyptian Food
 itemGroup.tabComponents=Components
+=======
+item.ful.name=Ful
+item.plainsandwich.name=Plain Sandwich
+item.fulsandwich.name=Ful Sandwich
+item.beans.name=Beans
+
+tile.mud.name=Mud
+tile.jar.name=Jar
+
+itemGroup.tabFood=Egyptian Food
+>>>>>>> a10b4a66619225eb78a70ecde64e14b3b339936b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package eg.ipvii.fotp.init;
 
 import net.minecraft.init.Blocks;
@@ -35,3 +36,17 @@ public class ModCrafting {
 
     }
 }
+=======
+package eg.ipvii.fotp.init;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+public class ModCrafting {
+
+    public static void register(){
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.jar), " W ", "G G", "G G", 'W', Blocks.WOODEN_PRESSURE_PLATE, 'G', Blocks.GLASS);
+    }
+}
+>>>>>>> a10b4a66619225eb78a70ecde64e14b3b339936b
