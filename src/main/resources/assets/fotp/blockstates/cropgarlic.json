@@ -1,48 +1,48 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "cross"
+    "model": "crop"
   },
   "variants": {
     "age": {
       "0": {
         "textures": {
-          "cross": "fotp:blocks/garlic/0"
+          "crop": "fotp:blocks/garlic/0"
         }
       },
       "1": {
         "textures": {
-          "cross": "fotp:blocks/garlic/1"
+          "crop": "fotp:blocks/garlic/1"
         }
       },
       "2": {
         "textures": {
-          "cross": "fotp:blocks/garlic/2"
+          "crop": "fotp:blocks/garlic/2"
         }
       },
       "3": {
         "textures": {
-          "cross": "fotp:blocks/garlic/3"
+          "crop": "fotp:blocks/garlic/3"
         }
       },
       "4": {
         "textures": {
-          "cross": "fotp:blocks/garlic/4"
+          "crop": "fotp:blocks/garlic/4"
         }
       },
       "5": {
         "textures": {
-          "cross": "fotp:blocks/garlic/5"
+          "crop": "fotp:blocks/garlic/5"
         }
       },
       "6": {
         "textures": {
-          "cross": "fotp:blocks/garlic/6"
+          "crop": "fotp:blocks/garlic/6"
         }
       },
       "7": {
         "textures": {
-          "cross": "fotp:blocks/garlic/7"
+          "crop": "fotp:blocks/garlic/7"
         }
       }
     }

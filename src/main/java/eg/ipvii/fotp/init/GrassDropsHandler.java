@@ -12,5 +12,6 @@ public class GrassDropsHandler {
         MinecraftForge.addGrassSeed(new ItemStack(ModItems.redpepperseeds), 6);
         MinecraftForge.addGrassSeed(new ItemStack(ModItems.riceseeds), 6);
         MinecraftForge.addGrassSeed(new ItemStack(ModItems.tomatoseeds), 5);
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.parsleyseeds), 5);
     }
 }

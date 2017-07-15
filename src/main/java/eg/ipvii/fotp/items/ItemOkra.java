@@ -3,14 +3,13 @@ package eg.ipvii.fotp.items;
 import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemFood;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-public class ItemOkra extends ItemFood{
+public class ItemOkra extends Item {
     public ItemOkra() {
-        super(1, 0.8F, false);
         setUnlocalizedName(References.FotPItems.OKRA.getUnlocalizedName());
         setRegistryName(References.FotPItems.OKRA.getRegistryName());
         setCreativeTab(FotPMod.FOODTAB);
