@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package eg.ipvii.fotp.init;
 
 import eg.ipvii.fotp.items.*;
@@ -10,7 +9,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems{
 
     public static Item ful;
-    public static Item plainsandwich;
+    public static Item pitabread;
     public static Item fulsandwich;
     public static Item beans;
     public static Item rawpastrami;
@@ -33,10 +32,16 @@ public class ModItems{
     public static Item tomatoseeds;
     public static Item tomatosauce;
     public static Item presser;
+    public static Item sunfloweroil;
+    public static Item parsley;
+    public static Item parsleyseeds;
+    public static Item falafeldough;
+    public static Item falafel;
+    public static Item falafelsandwich;
 
     public static void init(){
         ful = new ItemFul();
-        plainsandwich = new ItemPlainSandwich();
+        pitabread = new ItemPitaBread();
         fulsandwich = new ItemFulSandwich();
         beans = new ItemBeans();
         rawpastrami = new ItemRawPastrami();
@@ -59,11 +64,17 @@ public class ModItems{
         tomatoseeds = new ItemTomatoSeeds();
         tomatosauce = new ItemTomatoSauce();
         presser = new ItemPresser();
+        parsley = new ItemParsley();
+        parsleyseeds = new ItemParsleySeeds();
+        falafeldough = new ItemFalafelDough();
+        falafel = new ItemFalafel();
+        falafelsandwich = new ItemFalafelSandwich();
+        sunfloweroil = new ItemSunflowerOil();
     }
 
     public static void register(){
         GameRegistry.register(ful);
-        GameRegistry.register(plainsandwich);
+        GameRegistry.register(pitabread);
         GameRegistry.register(fulsandwich);
         GameRegistry.register(beans);
         GameRegistry.register(rawpastrami);
@@ -86,10 +97,16 @@ public class ModItems{
         GameRegistry.register(tomatoseeds);
         GameRegistry.register(tomatosauce);
         GameRegistry.register(presser);
+        GameRegistry.register(parsley);
+        GameRegistry.register(parsleyseeds);
+        GameRegistry.register(falafeldough);
+        GameRegistry.register(falafel);
+        GameRegistry.register(falafelsandwich);
+        GameRegistry.register(sunfloweroil);
     }
     public static void registerRenders(){
         registerRender(ful);
-        registerRender(plainsandwich);
+        registerRender(pitabread);
         registerRender(fulsandwich);
         registerRender(beans);
         registerRender(rawpastrami);
@@ -111,55 +128,16 @@ public class ModItems{
         registerRender(tomatoseeds);
         registerRender(tomatosauce);
         registerRender(presser);
+        registerRender(parsley);
+        registerRender(parsleyseeds);
+        registerRender(falafeldough);
+        registerRender(falafel);
+        registerRender(falafelsandwich);
+        registerRender(sunfloweroil);
+        registerRender(paprikapowder);
     }
     private static void registerRender(Item item){
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 
     }
 }
-=======
-package eg.ipvii.fotp.init;
-
-import eg.ipvii.fotp.items.ItemBeans;
-import eg.ipvii.fotp.items.ItemFul;
-import eg.ipvii.fotp.items.ItemFulSandwich;
-import eg.ipvii.fotp.items.ItemPlainSandwich;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-
-public class ModItems{
-
-    public static Item ful;
-    public static Item plainsandwich;
-    public static Item fulsandwich;
-    public static Item beans;
-
-    public static void init(){
-        ful = new ItemFul();
-        plainsandwich = new ItemPlainSandwich();
-        fulsandwich = new ItemFulSandwich();
-        beans = new ItemBeans();
-    }
-
-    public static void register(){
-        GameRegistry.register(ful);
-        GameRegistry.register(plainsandwich);
-        GameRegistry.register(fulsandwich);
-        GameRegistry.register(beans);
-
-    }
-    public static void registerRenders(){
-        registerRender(ful);
-        registerRender(plainsandwich);
-        registerRender(fulsandwich);
-        registerRender(beans);
-
-    }
-    private static void registerRender(Item item){
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-
-    }
-}
->>>>>>> a10b4a66619225eb78a70ecde64e14b3b339936b

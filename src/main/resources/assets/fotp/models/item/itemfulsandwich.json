@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
   "parent": "item/generated",
   "textures": {
     "layer0": "fotp:items/fulsandwich"
   }
-=======
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "fotp:items/fulsandwich"
-  }
->>>>>>> a10b4a66619225eb78a70ecde64e14b3b339936b
 }

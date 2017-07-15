@@ -1,0 +1,50 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "crop"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "textures": {
+          "crop": "fotp:blocks/cumin/0"
+        }
+      },
+      "1": {
+        "textures": {
+          "crop": "fotp:blocks/cumin/1"
+        }
+      },
+      "2": {
+        "textures": {
+          "crop": "fotp:blocks/cumin/2"
+        }
+      },
+      "3": {
+        "textures": {
+          "crop": "fotp:blocks/cumin/3"
+        }
+      },
+      "4": {
+        "textures": {
+          "crop": "fotp:blocks/cumin/4"
+        }
+      },
+      "5": {
+        "textures": {
+          "cross": "fotp:blocks/cumin/5"
+        }
+      },
+      "6": {
+        "textures": {
+          "crop": "fotp:blocks/cumin/6"
+        }
+      },
+      "7": {
+        "textures": {
+          "cross": "fotp:blocks/cumin/7"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cross"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "textures": {
+          "cross": "fotp:blocks/okra/0"
+        }
+      },
+      "1": {
+        "textures": {
+          "cross": "fotp:blocks/okra/1"
+        }
+      },
+      "2": {
+        "textures": {
+          "cross": "fotp:blocks/okra/2"
+        }
+      },
+      "3": {
+        "textures": {
+          "cross": "fotp:blocks/okra/3"
+        }
+      },
+      "4": {
+        "textures": {
+          "cross": "fotp:blocks/okra/4"
+        }
+      },
+      "5": {
+        "textures": {
+          "cross": "fotp:blocks/okra/5"
+        }
+      },
+      "6": {
+        "textures": {
+          "cross": "fotp:blocks/okra/6"
+        }
+      },
+      "7": {
+        "textures": {
+          "cross": "fotp:blocks/okra/7"
+        }
+      }
+    }
+  }
+}

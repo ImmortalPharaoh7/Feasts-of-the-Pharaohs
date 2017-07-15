@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
   "parent": "block/cube_all",
   "textures": {
     "all": "fotp:blocks/mud"
   }
-=======
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "fotp:blocks/mud"
-  }
->>>>>>> a10b4a66619225eb78a70ecde64e14b3b339936b
 }

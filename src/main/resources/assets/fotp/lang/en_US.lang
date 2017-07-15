@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 item.ful.name=Ful
-item.plainsandwich.name=Plain Sandwich
+item.pitabread.name=Pita Bread
 item.fulsandwich.name=Ful Sandwich
 item.beans.name=Fava Beans
 item.cumin.name=Cumin
@@ -19,21 +18,21 @@ item.earthenwarestick.name=Earthenware Stick
 item.rice.name=Rice
 item.riceseeds.name=Rice Seeds
 item.tomato.name=Tomato
-item.tomatoseed.name=Tomato Seeds
+item.tomatoseeds.name=Tomato Seeds
+item.tomatosauce.name=Tomato Sauce
+item.falafeldough.name=Falafel Dough
+item.falafel.name=Falafel
+item.falafelsandwich.name=Falafel Sandwich
+item.parsley.name=Parsley
+item.parsleyseeds.name=Parsley Seeds
+item.sunfloweroil.name=Sunflower Oil
+item.paprikapowder.name=Paprika Powder
+item.presser.name=Presser
 
 tile.mud.name=Mud
-tile.jar.name=Jar
+tile.jar.name=Jar (WIP)
+tile.fulqedra.name=Ful Qedra
 
 itemGroup.tabFood=Egyptian Food
 itemGroup.tabComponents=Components
-=======
-item.ful.name=Ful
-item.plainsandwich.name=Plain Sandwich
-item.fulsandwich.name=Ful Sandwich
-item.beans.name=Beans
-
-tile.mud.name=Mud
-tile.jar.name=Jar
-
-itemGroup.tabFood=Egyptian Food
->>>>>>> a10b4a66619225eb78a70ecde64e14b3b339936b
+itemGroup.tabEgyptianTools=Egyptian Tools
