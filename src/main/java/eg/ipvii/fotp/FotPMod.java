@@ -45,6 +45,7 @@ public class FotPMod {
         ModCrafting.register();
 
         GameRegistry.registerTileEntity(TileEntityJar.class, References.MOD_ID + "TileEntityJar");
+        GameRegistry.registerTileEntity(, References.MOD_ID + "TileEntityFulQedra");
     }
 
     @Mod.EventHandler

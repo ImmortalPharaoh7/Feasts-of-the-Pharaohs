@@ -4,14 +4,12 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntityFurnace;
 
 import javax.annotation.Nullable;
 
 public class SlotQedraFuel extends Slot {
 
-    public SlotQedraFuel(IInventory inventoryIn, int slotIndex, int xPosition, int yPosition)
-    {
+    public SlotQedraFuel(IInventory inventoryIn, int slotIndex, int xPosition, int yPosition) {
         super(inventoryIn, slotIndex, xPosition, yPosition);
     }
 
@@ -20,7 +18,7 @@ public class SlotQedraFuel extends Slot {
      */
     public boolean isItemValid(@Nullable ItemStack stack)
     {
-        return TileEntityFurnace.isItemFuel(stack) || isBucket(stack);
+        return TileEntityFulQedra.isItemFuel(stack) || isBucket(stack);
     }
 
     public int getItemStackLimit(ItemStack stack)

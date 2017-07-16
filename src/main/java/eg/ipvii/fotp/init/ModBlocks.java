@@ -33,7 +33,7 @@ public class ModBlocks {
         ricecrop = new BlockCropRice();
         tomatocrop = new BlockCropTomato();
         parsleycrop = new BlockCropParsley();
-        fulqedra = new BlockFulQedra(true);
+        fulqedra = new BlockFulQedra();
 
     }
 
