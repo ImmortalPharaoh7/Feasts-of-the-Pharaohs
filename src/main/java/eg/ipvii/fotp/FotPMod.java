@@ -3,6 +3,7 @@ package eg.ipvii.fotp;
 import eg.ipvii.fotp.init.*;
 import eg.ipvii.fotp.proxy.CommonProxy;
 
+import eg.ipvii.fotp.tileentity.TileEntityFulQedra;
 import eg.ipvii.fotp.tileentity.TileEntityJar;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
@@ -45,7 +46,7 @@ public class FotPMod {
         ModCrafting.register();
 
         GameRegistry.registerTileEntity(TileEntityJar.class, References.MOD_ID + "TileEntityJar");
-        GameRegistry.registerTileEntity(, References.MOD_ID + "TileEntityFulQedra");
+        GameRegistry.registerTileEntity(TileEntityFulQedra.class, References.MOD_ID + "TileEntityFulQedra");
     }
 
     @Mod.EventHandler

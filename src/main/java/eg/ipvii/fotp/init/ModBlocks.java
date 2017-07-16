@@ -21,6 +21,7 @@ public class ModBlocks {
     public static Block tomatocrop;
     public static Block parsleycrop;
     public static Block fulqedra;
+    public static Block stove;
 
     public static void init(){
         mud = new BlockMud();
@@ -34,6 +35,7 @@ public class ModBlocks {
         tomatocrop = new BlockCropTomato();
         parsleycrop = new BlockCropParsley();
         fulqedra = new BlockFulQedra();
+        stove = new BlockStove();
 
     }
 
@@ -49,6 +51,7 @@ public class ModBlocks {
         registerBlock(tomatocrop);
         registerBlock(parsleycrop);
         registerBlock(fulqedra);
+        registerBlock(stove);
     }
 
     private static void registerBlock(Block block){
@@ -70,6 +73,7 @@ public class ModBlocks {
         registerRender(tomatocrop);
         registerRender(parsleycrop);
         registerRender(fulqedra);
+        registerRender(stove);
     }
     private static void registerRender(Block block){
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));

@@ -69,7 +69,8 @@ public class References {
         RICECROP("ricecrop", "croprice"),
         TOMATOCROP("tomatocrop", "croptomato"),
         PARSLEYCROP("prasleycrop", "cropparsley"),
-        FULQEDRA("fulqedra", "blockfulqedra");
+        FULQEDRA("fulqedra", "blockfulqedra"),
+        STOVE("stove", "blockstove");
 
 
         private String unlocalizedName;
