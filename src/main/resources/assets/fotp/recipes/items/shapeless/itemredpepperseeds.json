@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fotp:itemredpepper"
+    }
+  ],
+  "result": {
+    "item": "fotp:itemfulsandwich",
+    "amount": 2
+  }
+}

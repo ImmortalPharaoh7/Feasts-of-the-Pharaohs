@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fotp:itemearthenwarebowl"
+    },
+    {
+      "item": "fotp:itemearthenwarestick"
+    }
+  ],
+  "result": {
+    "item": "fotp:itemmortarandpestle"
+  }
+}

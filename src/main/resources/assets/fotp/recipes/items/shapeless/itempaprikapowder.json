@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fotp:itemmortarandpestle"
+    },
+    {
+      "item": "fotp:itemredpepper"
+    }
+  ],
+  "result": {
+    "item": "fotp:itempaprikapowder",
+    "amount": 3
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SES",
+    "SES",
+    "SES"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:itemearthenwarestick"
+    },
+    "E": {
+      "item": "minecraft:itemearthenware"
+    }
+  },
+  "result": {
+    "item": "fotp:presser"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fotp:itembeans"
+    },
+    {
+      "item": "fotp:itemsunfloweroil"
+    },
+    {
+      "item": "fotp:itemparsley"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "fotp:itemfalafeldough"
+  }
+}

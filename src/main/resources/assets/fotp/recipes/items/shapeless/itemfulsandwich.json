@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+    "item": "fotp:itemful"
+    },
+    {
+      "item": "fotp:itempitabread"
+    }
+  ],
+  "result": {
+    "item": "fotp:itemfulsandwich"
+  }
+}

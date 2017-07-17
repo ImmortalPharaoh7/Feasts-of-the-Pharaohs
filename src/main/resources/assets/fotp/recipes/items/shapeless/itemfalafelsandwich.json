@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fotp:itemfalafel"
+    },
+    {
+      "item": "fotp:itempitabread"
+    }
+  ],
+  "result": {
+    "item": "fotp:itemfalafelsandwich"
+  }
+}

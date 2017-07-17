@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    "G G",
+    "GGG"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wooden_pressure_plate"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "fotp:blockjar"
+  }
+}

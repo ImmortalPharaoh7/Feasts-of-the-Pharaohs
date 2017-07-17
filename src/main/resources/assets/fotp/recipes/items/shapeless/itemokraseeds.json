@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fotp:itemokra"
+    }
+  ],
+  "result": {
+    "item": "fotp:itemokraseeds",
+    "amount": 2
+  }
+}

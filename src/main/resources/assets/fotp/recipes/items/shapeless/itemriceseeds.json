@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fotp:itemrice"
+    }
+  ],
+  "result": {
+    "item": "fotp:itemriceseeds",
+    "amount": 2
+  }
+}

@@ -18,7 +18,7 @@ public class References {
         PASTRAMI("pastrami", "itempastrami"),
         CUMIN("cumin", "itemcumin"),
         GARLIC("garlic", "itemgarlic"),
-        MUDBALL("mudball", "itemmudball"),
+        MUDBALL("mudball", "itemmudball.json"),
         EARTHENWARE("earthenware", "itemearthenware"),
         MORTARANDPESTLE("mortarandpestle", "itemmortarandpestle"),
         EARTHENWAREBOWL("earthenwarebowl", "itemearthenwarebowl"),

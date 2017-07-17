@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fotp:itemparsley"
+    }
+  ],
+  "result": {
+    "item": "fotp:itemparsleyseeds",
+    "amount": 2
+  }
+}
