@@ -67,13 +67,13 @@ public class BlockJar extends Block implements ITileEntityProvider{
                 TileEntityJar jar = (TileEntityJar) tileEntity;
                 if (heldItem != null) {
                     if (heldItem.getItem() == ModItems.fulsandwich) {
-                        if(jar.addSandwich()){
+                        if(jar.addFood(jar.sandwichcount, jar.LIMIT)){
                             heldItem.stackSize--;
                             return true;
                         }
                     }
                 }
-                jar.removeSandwich();
+                jar.removeFood(jar.sandwichcount, new ItemStack(ModItems.fulsandwich));
             }
         }
         return true;

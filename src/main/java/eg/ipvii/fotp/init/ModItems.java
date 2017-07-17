@@ -38,6 +38,7 @@ public class ModItems{
     public static Item falafeldough;
     public static Item falafel;
     public static Item falafelsandwich;
+    public static Item ladle;
 
     public static void init(){
         ful = new ItemFul();
@@ -70,6 +71,7 @@ public class ModItems{
         falafel = new ItemFalafel();
         falafelsandwich = new ItemFalafelSandwich();
         sunfloweroil = new ItemSunflowerOil();
+        ladle = new ItemLadle();
     }
 
     public static void register(){
@@ -103,6 +105,7 @@ public class ModItems{
         GameRegistry.register(falafel);
         GameRegistry.register(falafelsandwich);
         GameRegistry.register(sunfloweroil);
+        GameRegistry.register(ladle);
     }
     public static void registerRenders(){
         registerRender(ful);
@@ -135,6 +138,7 @@ public class ModItems{
         registerRender(falafelsandwich);
         registerRender(sunfloweroil);
         registerRender(paprikapowder);
+        registerRender(ladle);
     }
     private static void registerRender(Item item){
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));

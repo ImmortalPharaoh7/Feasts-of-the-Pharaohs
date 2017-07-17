@@ -39,7 +39,8 @@ public class References {
         PARSLEYSEEDS("parsleyseeds", "itemparsleyseeds"),
         FALAFELDOUGH("falafeldough", "itemfalafeldough"),
         FALAFEL("falafel", "itemfalafel"),
-        FALAFELSANDWICH("falafelsandwich", "itemfalafelsandwich");
+        FALAFELSANDWICH("falafelsandwich", "itemfalafelsandwich"),
+        LADLE("ladle", "itemladle");
 
         private String unlocalizedName;
         private String registryName;

@@ -8,26 +8,10 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityJar extends TileEntity{
+public class TileEntityJar extends TileEntityAddandRemove{
 
     public int sandwichcount = 0;
-
-    public boolean addSandwich(){
-            if (sandwichcount < 4) {
-                sandwichcount++;
-                markDirty();
-                return true;
-            }
-        return false;
-    }
-    public boolean removeSandwich(){
-            if (sandwichcount > 0) {
-            worldObj.spawnEntityInWorld(new EntityItem(worldObj, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, new ItemStack(ModItems.fulsandwich)));
-            sandwichcount--;
-            }
-        markDirty();
-        return false;
-    }
+    public final int LIMIT = 4;
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
