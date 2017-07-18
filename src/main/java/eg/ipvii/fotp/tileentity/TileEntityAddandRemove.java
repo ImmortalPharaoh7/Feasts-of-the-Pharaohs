@@ -14,7 +14,7 @@ public abstract class TileEntityAddandRemove extends TileEntity {
     }
     public boolean removeFood(int foodcount, ItemStack food){
         if(foodcount > 0){
-            worldObj.spawnEntityInWorld(new EntityItem(worldObj, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, food));
+            world.spawnEntity(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, food));
             foodcount--;
             markDirty();
             return true;

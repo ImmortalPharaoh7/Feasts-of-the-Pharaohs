@@ -6,13 +6,18 @@ import eg.ipvii.fotp.proxy.CommonProxy;
 import eg.ipvii.fotp.tileentity.TileEntityFulQedra;
 import eg.ipvii.fotp.tileentity.TileEntityJar;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 @Mod(modid = References.MOD_ID, name = References.NAME, version = References.VERSION, acceptedMinecraftVersions = References.ACCEPTED_MC_VERSIONS)
 public class FotPMod {
@@ -27,13 +32,14 @@ public class FotPMod {
     public static final CreativeTabs COMPONENTSTAB = new ComponentsTab();
     public static final CreativeTabs EGYTPIANTOOLSTAB = new EgyptianToolsTab();
 
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        ModBlocks.init();
-        ModBlocks.register();
+        //ModBlocks.init();
+        //ModBlocks.register();
 
-        ModItems.init();
-        ModItems.register();
+        //ModItems.init();
+        //ModItems.register();
 
         MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
         MinecraftForge.EVENT_BUS.register(new GrassDropsHandler());
@@ -41,7 +47,6 @@ public class FotPMod {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        proxy.init();
 
         ModCrafting.register();
 
@@ -54,4 +59,22 @@ public class FotPMod {
 
     }
 
+    @Mod.EventBusSubscriber(value = Side.CLIENT, modid = References.MOD_ID)
+    public static class RegistrationHandler{
+
+        @SubscribeEvent
+        public static void registerItems(RegistryEvent.Register<Item> event){
+            ModItems.register(event.getRegistry());
+        }
+
+    }
+
+    @Mod.EventBusSubscriber
+    public static class ModelsRegistrationHandler{
+
+        @SubscribeEvent
+        public static void registerItems(ModelRegistryEvent event){
+            ModItems.registerModels();
+        }
+    }
 }

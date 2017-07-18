@@ -22,7 +22,7 @@ public class TileEntityStove extends TileEntity implements ITickable {
 
     public boolean removeCoal(){
         if (coalCount > 0){
-            worldObj.spawnEntityInWorld(new EntityItem(worldObj, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, new ItemStack(Items.COAL)));
+            world.spawnEntity(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, new ItemStack(Items.COAL)));
             coalCount--;
             markDirty();
             return true;

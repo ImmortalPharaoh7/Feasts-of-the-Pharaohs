@@ -1,14 +1,17 @@
 package eg.ipvii.fotp.init;
 
+import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.items.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModItems{
 
-    public static Item ful;
+    public static ItemBase ful = new ItemBase("ful").setCreativeTab(FotPMod.FOODTAB);
     public static Item pitabread;
     public static Item fulsandwich;
     public static Item beans;
@@ -40,108 +43,12 @@ public class ModItems{
     public static Item falafelsandwich;
     public static Item ladle;
 
-    public static void init(){
-        ful = new ItemFul();
-        pitabread = new ItemPitaBread();
-        fulsandwich = new ItemFulSandwich();
-        beans = new ItemBeans();
-        rawpastrami = new ItemRawPastrami();
-        pastrami = new ItemPastrami();
-        cumin = new ItemCumin();
-        garlic = new ItemGarlic();
-        mudball = new ItemMudBall();
-        earthenware = new ItemEarthenWare();
-        mortarandpestle = new ItemMortarandPestle();
-        earthenwarebowl = new ItemEarthenwareBowl();
-        earthenwarestick = new ItemEarthenwareStick();
-        redpepper = new ItemRedPepper();
-        redpepperseeds = new ItemRedPepperSeeds();
-        okra = new ItemOkra();
-        okraseeds = new ItemOkraSeeds();
-        rice = new ItemRice();
-        riceseeds = new ItemRiceSeeds();
-        paprikapowder = new ItemPaprikaPowder();
-        tomato = new ItemTomato();
-        tomatoseeds = new ItemTomatoSeeds();
-        tomatosauce = new ItemTomatoSauce();
-        presser = new ItemPresser();
-        parsley = new ItemParsley();
-        parsleyseeds = new ItemParsleySeeds();
-        falafeldough = new ItemFalafelDough();
-        falafel = new ItemFalafel();
-        falafelsandwich = new ItemFalafelSandwich();
-        sunfloweroil = new ItemSunflowerOil();
-        ladle = new ItemLadle();
+    public static void register(IForgeRegistry<Item> registry){
+        registry.registerAll(
+                ful
+        );
     }
-
-    public static void register(){
-        GameRegistry.register(ful);
-        GameRegistry.register(pitabread);
-        GameRegistry.register(fulsandwich);
-        GameRegistry.register(beans);
-        GameRegistry.register(rawpastrami);
-        GameRegistry.register(pastrami);
-        GameRegistry.register(cumin);
-        GameRegistry.register(garlic);
-        GameRegistry.register(mudball);
-        GameRegistry.register(earthenware);
-        GameRegistry.register(mortarandpestle);
-        GameRegistry.register(earthenwarebowl);
-        GameRegistry.register(earthenwarestick);
-        GameRegistry.register(redpepper);
-        GameRegistry.register(redpepperseeds);
-        GameRegistry.register(okra);
-        GameRegistry.register(okraseeds);
-        GameRegistry.register(rice);
-        GameRegistry.register(riceseeds);
-        GameRegistry.register(paprikapowder);
-        GameRegistry.register(tomato);
-        GameRegistry.register(tomatoseeds);
-        GameRegistry.register(tomatosauce);
-        GameRegistry.register(presser);
-        GameRegistry.register(parsley);
-        GameRegistry.register(parsleyseeds);
-        GameRegistry.register(falafeldough);
-        GameRegistry.register(falafel);
-        GameRegistry.register(falafelsandwich);
-        GameRegistry.register(sunfloweroil);
-        GameRegistry.register(ladle);
-    }
-    public static void registerRenders(){
-        registerRender(ful);
-        registerRender(pitabread);
-        registerRender(fulsandwich);
-        registerRender(beans);
-        registerRender(rawpastrami);
-        registerRender(pastrami);
-        registerRender(cumin);
-        registerRender(garlic);
-        registerRender(mudball);
-        registerRender(earthenware);
-        registerRender(mortarandpestle);
-        registerRender(earthenwarebowl);
-        registerRender(earthenwarestick);
-        registerRender(redpepper);
-        registerRender(redpepperseeds);
-        registerRender(okra);
-        registerRender(okraseeds);
-        registerRender(rice);
-        registerRender(riceseeds);
-        registerRender(tomato);
-        registerRender(tomatoseeds);
-        registerRender(tomatosauce);
-        registerRender(presser);
-        registerRender(parsley);
-        registerRender(parsleyseeds);
-        registerRender(falafeldough);
-        registerRender(falafel);
-        registerRender(falafelsandwich);
-        registerRender(sunfloweroil);
-        registerRender(paprikapowder);
-        registerRender(ladle);
-    }
-    private static void registerRender(Item item){
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-
+    public static void registerModels(){
+        ful.registerItemModel();
     }
 }
