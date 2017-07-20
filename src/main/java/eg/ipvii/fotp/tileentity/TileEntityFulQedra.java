@@ -2,7 +2,6 @@ package eg.ipvii.fotp.tileentity;
 
 import com.teamwizardry.librarianlib.features.autoregister.TileRegister;
 import com.teamwizardry.librarianlib.features.saving.Save;
-import eg.ipvii.fotp.blocks.BlockStove;
 import eg.ipvii.fotp.init.ModBlocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ITickable;
@@ -33,7 +32,7 @@ public class TileEntityFulQedra extends TileEntityAddandRemove implements ITicka
 
     public boolean isQedraHeated() {
         BlockPos posUnderBlock = new BlockPos(pos.getX(), pos.getY() - 1, pos.getZ());
-        return getWorld().getBlockState(posUnderBlock).getBlock().getDefaultState() == ModBlocks.stove.getDefaultState() && BlockStove.isHeated();
+        return getWorld().getBlockState(posUnderBlock).getBlock().getDefaultState() == ModBlocks.stove.getDefaultState() && isQedraHeated();
     }
 
     public boolean canCook() {

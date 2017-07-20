@@ -1,6 +1,6 @@
 package eg.ipvii.fotp.tileentity;
 
-import com.teamwizardry.librarianlib.features.base.block.TileMod;
+import com.teamwizardry.librarianlib.features.base.block.tile.TileMod;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 

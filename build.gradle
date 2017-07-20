@@ -41,7 +41,7 @@ minecraft {
 }
 
 dependencies {
-        compile "com.teamwizardry.librarianlib:librarianlib:3.1.5-SNAPSHOT:deobf"
+        //compile "com.teamwizardry.librarianlib:librarianlib:3.1.5-SNAPSHOT:deobf"
 }
 
 processResources {

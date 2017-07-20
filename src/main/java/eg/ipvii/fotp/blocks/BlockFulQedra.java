@@ -1,6 +1,6 @@
 package eg.ipvii.fotp.blocks;
 
-import com.teamwizardry.librarianlib.features.base.block.BlockModContainer;
+import com.teamwizardry.librarianlib.features.base.block.tile.BlockModContainer;
 import eg.ipvii.fotp.References;
 import eg.ipvii.fotp.init.ModItems;
 import eg.ipvii.fotp.tileentity.TileEntityFulQedra;
