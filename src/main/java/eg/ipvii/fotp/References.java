@@ -4,7 +4,7 @@ public class References {
     public static final String MOD_ID = "FotP";
     public static final String NAME = "Feast of the Pharaohs";
     public static final String VERSION = "0.2.0";
-    public static final String ACCEPTED_MC_VERSIONS = "[1.10.2]";
+    public static final String ACCEPTED_MC_VERSIONS = "[1.12]";
 
     public static final String CLIENT_PROXY_CLASS = "eg.ipvii.fotp.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "eg.ipvii.fotp.proxy.ServerProxy";
