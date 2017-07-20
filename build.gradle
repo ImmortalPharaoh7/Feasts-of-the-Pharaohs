@@ -1,13 +1,16 @@
 buildscript {
+    ext.kotlin_version = '1.1.3-2'
     repositories {
         jcenter()
         maven { url = "http://files.minecraftforge.net/maven" }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'kotlin'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
@@ -26,6 +29,7 @@ repositories {
     maven {
         url "http://dvs1.progwml6.com/files/maven"
     }
+    mavenCentral()
 }
 minecraft {
     version = "1.12-14.21.1.2413"
@@ -41,7 +45,8 @@ minecraft {
 }
 
 dependencies {
-        //compile "com.teamwizardry.librarianlib:librarianlib:3.1.5-SNAPSHOT:deobf"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    //compile "com.teamwizardry.librarianlib:librarianlib:3.1.5-SNAPSHOT:deobf"
 }
 
 processResources {
@@ -60,5 +65,15 @@ processResources {
     // copy everything else except the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
+    }
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }

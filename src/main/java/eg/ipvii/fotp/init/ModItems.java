@@ -30,15 +30,15 @@ public class ModItems {
     public static Item riceseeds = new ItemSeedMod("riceseeds", ModBlocks.ricecrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
     public static Item paprikapowder = new ItemMod("paprikapowder").setCreativeTab(FotPMod.FOODTAB);
     public static Item tomato = new ItemModFood("tomato", 1, 0.5F, false);
-    public static Item tomatoseeds = new ItemTomatoSeeds();
-    public static Item tomatosauce = new ItemTomatoSauce();
+    public static Item tomatoseeds = new ItemSeedMod("tomatoseeds", ModBlocks.ricecrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
+    public static Item tomatosauce = new ItemMod("tomatosauce").setCreativeTab(FotPMod.FOODTAB);
     public static Item presser = new ItemPresser();
-    public static Item sunfloweroil = new ItemSunflowerOil();
-    public static Item parsley = new ItemParsley();
-    public static Item parsleyseeds = new ItemParsleySeeds();
-    public static Item falafeldough = new ItemFalafelDough();
-    public static Item falafel = new ItemFalafel();
-    public static Item falafelsandwich = new ItemFalafelSandwich();
-    public static Item ladle = new ItemLadle();
+    public static Item sunfloweroil = new ItemMod("sunfloweroil").setCreativeTab(FotPMod.FOODTAB);
+    public static Item parsley = new ItemModFood("parsley", 2, 0.3F, false).setCreativeTab(FotPMod.FOODTAB);
+    public static Item parsleyseeds = new ItemSeedMod("parsleyseeds", ModBlocks.parsleycrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
+    public static Item falafeldough = new ItemMod("falafeldough").setCreativeTab(FotPMod.FOODTAB);
+    public static Item falafel = new ItemModFood("falafel", 4, 0.5F, false).setCreativeTab(FotPMod.FOODTAB);
+    public static Item falafelsandwich = new ItemModFood("falafelsandwich", 8, 1F, true).setCreativeTab(FotPMod.FOODTAB);
+    public static Item ladle = new ItemMod("ladle").setCreativeTab(FotPMod.EGYTPIANTOOLSTAB);
 
 }
