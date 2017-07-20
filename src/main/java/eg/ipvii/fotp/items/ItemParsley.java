@@ -1,14 +1,12 @@
 package eg.ipvii.fotp.items;
 
+import com.teamwizardry.librarianlib.features.base.item.ItemModFood;
 import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
-import net.minecraft.item.ItemFood;
 
-public class ItemParsley extends ItemFood {
+public class ItemParsley extends ItemModFood {
     public ItemParsley() {
-        super(2, 0.3F, false);
-        setUnlocalizedName(References.FotPItems.PARSLEY.getUnlocalizedName());
-        setRegistryName(References.FotPItems.PARSLEY.getRegistryName());
+        super(References.FotPItems.PARSLEY.getRegistryName(), 2, 0.3F, false);
         setCreativeTab(FotPMod.FOODTAB);
     }
 }

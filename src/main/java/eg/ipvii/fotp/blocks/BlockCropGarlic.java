@@ -2,14 +2,12 @@ package eg.ipvii.fotp.blocks;
 
 import eg.ipvii.fotp.References;
 import eg.ipvii.fotp.init.ModItems;
-import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class BlockCropGarlic extends BlockCrops {
+public class BlockCropGarlic extends BlockCropsMod {
 
     public BlockCropGarlic() {
-        setUnlocalizedName(References.FotPBlocks.GARLICCROP.getUnlocalizedName());
-        setRegistryName(References.FotPBlocks.GARLICCROP.getRegistryName());
+        super(References.FotPBlocks.GARLICCROP.getRegistryName());
     }
 
     @Override

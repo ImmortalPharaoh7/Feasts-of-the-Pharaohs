@@ -1,9 +1,8 @@
 package eg.ipvii.fotp.blocks;
 
+import com.teamwizardry.librarianlib.features.base.block.tile.BlockModContainer;
 import eg.ipvii.fotp.References;
 import eg.ipvii.fotp.tileentity.TileEntityStove;
-import net.minecraft.block.Block;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,11 +15,9 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockStove extends Block implements ITileEntityProvider {
+public class BlockStove extends BlockModContainer {
     public BlockStove() {
-        super(Material.ROCK);
-        setUnlocalizedName(References.FotPBlocks.STOVE.getUnlocalizedName());
-        setRegistryName(References.FotPBlocks.STOVE.getRegistryName());
+        super(References.FotPBlocks.STOVE.getRegistryName(), Material.ROCK);
         setHardness(1);
     }
 
@@ -34,7 +31,7 @@ public class BlockStove extends Block implements ITileEntityProvider {
     }
 
     @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
+    public TileEntity createTileEntity(World worldIn, IBlockState meta) {
         return new TileEntityStove();
     }
 

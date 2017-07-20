@@ -1,11 +1,10 @@
 package eg.ipvii.fotp.items;
 
+import com.teamwizardry.librarianlib.features.base.item.ItemMod;
 import eg.ipvii.fotp.References;
-import net.minecraft.item.Item;
 
-public class ItemLadle extends Item {
+public class ItemLadle extends ItemMod {
     public ItemLadle() {
-        setUnlocalizedName(References.FotPItems.LADLE.getUnlocalizedName());
-        setRegistryName(References.FotPItems.LADLE.getRegistryName());
+        super(References.FotPItems.LADLE.getRegistryName());
     }
 }

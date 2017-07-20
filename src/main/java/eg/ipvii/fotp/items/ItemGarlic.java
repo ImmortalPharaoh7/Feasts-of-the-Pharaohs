@@ -4,13 +4,10 @@ import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
 import eg.ipvii.fotp.init.ModBlocks;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemSeeds;
 
-public class ItemGarlic extends ItemSeeds {
+public class ItemGarlic extends ItemSeedMod {
     public ItemGarlic() {
-        super(ModBlocks.garliccrop, Blocks.FARMLAND);
-        setUnlocalizedName(References.FotPItems.GARLIC.getUnlocalizedName());
-        setRegistryName(References.FotPItems.GARLIC.getRegistryName());
+        super(References.FotPItems.GARLIC.getRegistryName(), ModBlocks.garliccrop, Blocks.FARMLAND);
         setCreativeTab(FotPMod.FOODTAB);
     }
 }

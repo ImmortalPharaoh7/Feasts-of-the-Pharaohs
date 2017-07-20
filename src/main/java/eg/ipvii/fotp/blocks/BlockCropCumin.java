@@ -2,13 +2,11 @@ package eg.ipvii.fotp.blocks;
 
 import eg.ipvii.fotp.References;
 import eg.ipvii.fotp.init.ModItems;
-import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class BlockCropCumin extends BlockCrops {
+public class BlockCropCumin extends BlockCropsMod {
     public BlockCropCumin() {
-        setUnlocalizedName(References.FotPBlocks.CUMMINCROP.getUnlocalizedName());
-        setRegistryName(References.FotPBlocks.CUMMINCROP.getRegistryName());
+        super(References.FotPBlocks.BEANSCROP.getRegistryName());
     }
 
     @Override

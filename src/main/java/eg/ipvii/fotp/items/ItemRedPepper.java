@@ -1,14 +1,12 @@
 package eg.ipvii.fotp.items;
 
+import com.teamwizardry.librarianlib.features.base.item.ItemModFood;
 import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
-import net.minecraft.item.ItemFood;
 
-public class ItemRedPepper extends ItemFood {
+public class ItemRedPepper extends ItemModFood {
     public ItemRedPepper() {
-        super(1, 0.5F, false);
-        setUnlocalizedName(References.FotPItems.REDPEPPER.getUnlocalizedName());
-        setRegistryName(References.FotPItems.REDPEPPER.getRegistryName());
+        super(References.FotPItems.REDPEPPER.getRegistryName(), 1, 0.5F, false);
         setCreativeTab(FotPMod.FOODTAB);
     }
 }

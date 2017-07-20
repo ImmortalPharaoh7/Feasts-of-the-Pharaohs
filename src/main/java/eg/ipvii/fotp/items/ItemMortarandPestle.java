@@ -1,17 +1,16 @@
 package eg.ipvii.fotp.items;
 
+import com.teamwizardry.librarianlib.features.base.item.ItemMod;
 import eg.ipvii.fotp.FotPMod;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemMortarandPestle extends Item {
+public class ItemMortarandPestle extends ItemMod {
 
     protected String name;
 
     public ItemMortarandPestle(String name) {
+        super(name);
         this.name = name;
-        setUnlocalizedName(name);
-        setRegistryName(name);
         setCreativeTab(FotPMod.COMPONENTSTAB);
         this.maxStackSize = 1;
     }

@@ -1,13 +1,12 @@
 package eg.ipvii.fotp.items;
 
+import com.teamwizardry.librarianlib.features.base.item.ItemMod;
 import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
-import net.minecraft.item.Item;
 
-public class ItemEarthenwareBowl extends Item {
+public class ItemEarthenwareBowl extends ItemMod {
     public ItemEarthenwareBowl() {
-        setUnlocalizedName(References.FotPItems.EARTHENWAREBOWL.getUnlocalizedName());
-        setRegistryName(References.FotPItems.EARTHENWAREBOWL.getRegistryName());
+        super(References.FotPItems.EARTHENWAREBOWL.getRegistryName());
         setCreativeTab(FotPMod.COMPONENTSTAB);
     }
 }

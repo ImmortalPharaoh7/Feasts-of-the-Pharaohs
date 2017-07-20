@@ -1,9 +1,9 @@
 package eg.ipvii.fotp.blocks;
 
+import com.teamwizardry.librarianlib.features.base.block.tile.BlockModContainer;
 import eg.ipvii.fotp.References;
 import eg.ipvii.fotp.init.ModItems;
 import eg.ipvii.fotp.tileentity.TileEntityFulQedra;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,13 +14,12 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
-public class BlockFulQedra extends BlockContainer {
+public class BlockFulQedra extends BlockModContainer {
 
     public BlockFulQedra() {
-        super(Material.ROCK);
-        setUnlocalizedName(References.FotPBlocks.FULQEDRA.getUnlocalizedName());
-        setRegistryName(References.FotPBlocks.FULQEDRA.getRegistryName());
+        super(References.FotPBlocks.FULQEDRA.getRegistryName(), Material.ROCK);
         setHardness(1);
     }
 
@@ -35,19 +34,16 @@ public class BlockFulQedra extends BlockContainer {
     }
 
     @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileEntityFulQedra();
-    }
-
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @javax.annotation.Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (worldIn.isRemote) {
             return true;
         } else {
             TileEntity tileentity = worldIn.getTileEntity(pos);
             if (tileentity instanceof TileEntityFulQedra) {
                 TileEntityFulQedra qedra = (TileEntityFulQedra) tileentity;
-                if (heldItem != null) {
-                    if (heldItem.getItem() == ModItems.beans && qedra.addFood(qedra.getBeansCount(), qedra.STACKLIMIT)) {
+                ItemStack heldItem = playerIn.getHeldItem(hand);
+                if (heldItem != ItemStack.EMPTY) {
+                    if (heldItem.getItem() == ModItems.beans && qedra.addFood(qedra.getBeansCount(), TileEntityFulQedra.STACKLIMIT)) {
                         int stackSize = heldItem.getCount();
                         heldItem.setCount(stackSize - 1);
                         if (heldItem.getCount() == 0) {
@@ -62,5 +58,11 @@ public class BlockFulQedra extends BlockContainer {
             }
         }
         return true;
+    }
+
+    @Nullable
+    @Override
+    public TileEntity createTileEntity(World world, IBlockState iBlockState) {
+        return new TileEntityFulQedra();
     }
 }

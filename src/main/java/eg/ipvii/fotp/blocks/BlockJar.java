@@ -1,10 +1,9 @@
 package eg.ipvii.fotp.blocks;
 
+import com.teamwizardry.librarianlib.features.base.block.tile.BlockModContainer;
 import eg.ipvii.fotp.References;
 import eg.ipvii.fotp.init.ModItems;
 import eg.ipvii.fotp.tileentity.TileEntityJar;
-import net.minecraft.block.Block;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,16 +18,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockJar extends Block implements ITileEntityProvider {
+public class BlockJar extends BlockModContainer {
 
     //1 / 16 = 0.0625
     private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12, 0.0625 * 12, 0.0625 * 12);
     private static final AxisAlignedBB COLLISION_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12, 0.0625 * 11, 0.0625 * 12);
 
     public BlockJar() {
-        super(Material.ROCK);
-        setUnlocalizedName(References.FotPBlocks.JAR.getUnlocalizedName());
-        setRegistryName(References.FotPBlocks.JAR.getRegistryName());
+        super(References.FotPBlocks.JAR.getRegistryName(), Material.ROCK);
     }
 
     @Override
@@ -77,7 +74,7 @@ public class BlockJar extends Block implements ITileEntityProvider {
     }
 
     @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
+    public TileEntity createTileEntity(World worldIn, IBlockState meta) {
         return new TileEntityJar();
     }
 }

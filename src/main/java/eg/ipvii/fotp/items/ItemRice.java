@@ -1,13 +1,10 @@
 package eg.ipvii.fotp.items;
 
-import eg.ipvii.fotp.FotPMod;
+import com.teamwizardry.librarianlib.features.base.item.ItemMod;
 import eg.ipvii.fotp.References;
-import net.minecraft.item.Item;
 
-public class ItemRice extends Item {
+public class ItemRice extends ItemMod {
     public ItemRice() {
-        setUnlocalizedName(References.FotPItems.RICE.getUnlocalizedName());
-        setRegistryName(References.FotPItems.RICE.getRegistryName());
-        setCreativeTab(FotPMod.FOODTAB);
+        super(References.FotPItems.RICE.getRegistryName());
     }
 }
