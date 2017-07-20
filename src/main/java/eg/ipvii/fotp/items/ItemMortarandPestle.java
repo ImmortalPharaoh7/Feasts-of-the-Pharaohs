@@ -6,9 +6,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class ItemMortarandPestle extends Item{
-    public ItemMortarandPestle(){
-        setUnlocalizedName(References.FotPItems.MORTARANDPESTLE.getUnlocalizedName());
-        setRegistryName(References.FotPItems.MORTARANDPESTLE.getRegistryName());
+
+    protected String name;
+
+    public ItemMortarandPestle(String name){
+        this.name = name;
+        setUnlocalizedName(name);
+        setRegistryName(name);
         setCreativeTab(FotPMod.COMPONENTSTAB);
         this.maxStackSize=1;
     }

@@ -5,6 +5,7 @@ import eg.ipvii.fotp.proxy.CommonProxy;
 
 import eg.ipvii.fotp.tileentity.TileEntityFulQedra;
 import eg.ipvii.fotp.tileentity.TileEntityJar;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -35,11 +36,6 @@ public class FotPMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        //ModBlocks.init();
-        //ModBlocks.register();
-
-        //ModItems.init();
-        //ModItems.register();
 
         MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
         MinecraftForge.EVENT_BUS.register(new GrassDropsHandler());
@@ -75,6 +71,14 @@ public class FotPMod {
         @SubscribeEvent
         public static void registerItems(ModelRegistryEvent event){
             ModItems.registerModels();
+        }
+    }
+    @Mod.EventBusSubscriber
+    public static class registrationBlocks{
+
+        @SubscribeEvent
+        public static void registerBlocks(RegistryEvent.Register<Block> event){
+            ModBlocks.register(event.getRegistry());
         }
     }
 }

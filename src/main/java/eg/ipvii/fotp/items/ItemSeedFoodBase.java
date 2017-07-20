@@ -3,14 +3,14 @@ package eg.ipvii.fotp.items;
 import eg.ipvii.fotp.FotPMod;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemSeeds;
+import net.minecraft.item.ItemSeedFood;
 
-public class ItemSeedsBase extends ItemSeeds {
+public class ItemSeedFoodBase extends ItemSeedFood {
 
     protected String name;
 
-    public ItemSeedsBase(String name, Block crops, Block soil) {
-        super(crops, soil);
+    public ItemSeedFoodBase(String name, int healAmount, float saturation, Block crops, Block soil) {
+        super(healAmount, saturation, crops, soil);
         this.name = name;
         setUnlocalizedName(name);
         setRegistryName(name);
@@ -21,7 +21,7 @@ public class ItemSeedsBase extends ItemSeeds {
     }
 
     @Override
-    public ItemSeedsBase setCreativeTab(CreativeTabs tab) {
+    public ItemSeedFoodBase setCreativeTab(CreativeTabs tab){
         super.setCreativeTab(tab);
         return this;
     }

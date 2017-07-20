@@ -14,7 +14,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class ModBlocks {
 
     public static BlockBase mud = new BlockBase("mud", Material.CLAY).setCreativeTab(FotPMod.COMPONENTSTAB);
-    public static Block jar;
+    public static BlockJar jar = new BlockJar();
     public static Block beanscrop;
     public static Block cumincrop;
     public static Block garliccrop;
@@ -33,10 +33,12 @@ public class ModBlocks {
     }
 
     public static void registerItemBlocks(IForgeRegistry<Item> registry){
-
+        registry.registerAll(
+                mud.createItemBlock()
+        );
     }
 
     public static void registerModels(){
-
+        mud.registerItemModel((ItemBlock) Item.getItemFromBlock(mud));
     }
 }
