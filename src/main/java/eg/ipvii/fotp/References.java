@@ -9,7 +9,7 @@ public class References {
     public static final String CLIENT_PROXY_CLASS = "eg.ipvii.fotp.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "eg.ipvii.fotp.proxy.ServerProxy";
 
-    public enum FotPItems{
+    public enum FotPItems {
         FUL("ful", "itemful"),
         PITABREAD("pitabread", "itempitabread"),
         FULSANDWICH("fulsandwich", "itemfulsandwich"),
@@ -45,7 +45,7 @@ public class References {
         private String unlocalizedName;
         private String registryName;
 
-        FotPItems(String UnlocalizedName, String RegistryName){
+        FotPItems(String UnlocalizedName, String RegistryName) {
             unlocalizedName = UnlocalizedName;
             registryName = RegistryName;
 
@@ -59,7 +59,8 @@ public class References {
             return registryName;
         }
     }
-    public enum FotPBlocks{
+
+    public enum FotPBlocks {
         MUD("mud", "blockmud"),
         JAR("jar", "blockjar"),
         BEANSCROP("beanscrop", "cropbeans"),
@@ -77,7 +78,7 @@ public class References {
         private String unlocalizedName;
         private String registryName;
 
-        FotPBlocks(String UnlocalizedName, String RegistryName){
+        FotPBlocks(String UnlocalizedName, String RegistryName) {
             unlocalizedName = UnlocalizedName;
             registryName = RegistryName;
 

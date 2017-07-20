@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 
 public class ItemPitaBread extends Item {
 
-    public ItemPitaBread(){
+    public ItemPitaBread() {
         setUnlocalizedName(References.FotPItems.PITABREAD.getUnlocalizedName());
         setRegistryName(References.FotPItems.PITABREAD.getRegistryName());
         setCreativeTab(FotPMod.FOODTAB);
