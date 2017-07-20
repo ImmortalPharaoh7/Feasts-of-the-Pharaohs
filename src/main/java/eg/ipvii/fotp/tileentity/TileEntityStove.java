@@ -12,28 +12,29 @@ public class TileEntityStove extends TileEntity implements ITickable {
     private int coalCount = 0;
     private int cooktime;
 
-    public boolean addCoal(){
-        if (coalCount < 8){
+    public boolean addCoal() {
+        if (coalCount < 8) {
             coalCount++;
             markDirty();
             return true;
-        }else return false;
+        } else return false;
     }
 
-    public boolean removeCoal(){
-        if (coalCount > 0){
+    public boolean removeCoal() {
+        if (coalCount > 0) {
             world.spawnEntity(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, new ItemStack(Items.COAL)));
             coalCount--;
             markDirty();
             return true;
-        }else return false;
+        } else return false;
     }
 
-    public void setCoalCount(int coalCount){
-        this.coalCount = coalCount;
-    }
-    public int getCoalCount(){
+    public int getCoalCount() {
         return coalCount;
+    }
+
+    public void setCoalCount(int coalCount) {
+        this.coalCount = coalCount;
     }
 
     @Override
@@ -51,16 +52,16 @@ public class TileEntityStove extends TileEntity implements ITickable {
 
     @Override
     public void update() {
-        if(isHeated()){
+        if (isHeated()) {
             --cooktime;
-            if(cooktime == 0 && coalCount > 0){
+            if (cooktime == 0 && coalCount > 0) {
                 cooktime += 3200;
                 coalCount--;
             }
         }
     }
 
-    public boolean isHeated(){
+    public boolean isHeated() {
         return cooktime > 0;
     }
 }

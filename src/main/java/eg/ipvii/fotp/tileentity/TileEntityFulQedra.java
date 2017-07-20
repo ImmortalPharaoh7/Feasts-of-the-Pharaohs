@@ -7,44 +7,47 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 
-public class TileEntityFulQedra extends TileEntityAddandRemove implements ITickable{
+public class TileEntityFulQedra extends TileEntityAddandRemove implements ITickable {
 
+    public final int STACKLIMIT = 16;
+    private final int COOKTIME = 400;
     public int beanscount = 0;
     private int fulcount = 0;
     private ItemStack[] qedraItemStack = new ItemStack[2];
-    private final int COOKTIME = 400;
-    public final int STACKLIMIT = 16;
-    private  int currentCookTime = 0;
+    private int currentCookTime = 0;
 
-    public int getBeansCount(){
+    public int getBeansCount() {
         return beanscount;
     }
-    public int getFulCount(){
+
+    public int getFulCount() {
         return fulcount;
     }
 
-    public boolean isQedraHeated(){
+    public boolean isQedraHeated() {
         BlockPos posUnderBlock = new BlockPos(pos.getX(), pos.getY() - 1, pos.getZ());
-        return worldObj.getBlockState(posUnderBlock).getBlock().getDefaultState() == ModBlocks.stove.getDefaultState() && BlockStove.isHeated();
+        return getWorld().getBlockState(posUnderBlock).getBlock().getDefaultState() == ModBlocks.stove.getDefaultState() && BlockStove.isHeated();
     }
 
-    public boolean canCook(){
-        if(beanscount > 0){
+    public boolean canCook() {
+        if (beanscount > 0) {
             return true;
-        }else return false;
+        } else return false;
     }
 
     @Override
     public void update() {
-        if(isQedraHeated()){
-            if (currentCookTime <= COOKTIME){
+        if (isQedraHeated()) {
+            if (currentCookTime <= COOKTIME) {
                 currentCookTime++;
-            }else if(currentCookTime > COOKTIME){
+            } else if (currentCookTime > COOKTIME) {
                 fulcount++;
                 currentCookTime = 0;
-            }markDirty();
+            }
+            markDirty();
         }
     }
+
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);

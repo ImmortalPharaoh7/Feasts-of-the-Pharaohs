@@ -8,12 +8,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class MobDropsHandler {
     @SubscribeEvent
-    public void onMobDrops(LivingDropsEvent event)
-    {
-        if (event.getEntity() instanceof EntityCow)
-        {
+    public void onMobDrops(LivingDropsEvent event) {
+        if (event.getEntity() instanceof EntityCow) {
             ItemStack stack = new ItemStack(ModItems.okra);
-            EntityItem drop = new EntityItem(event.getEntity().worldObj, event.getEntity().posX, event.getEntity().posY, event.getEntity().posZ, stack);
+            EntityItem drop = new EntityItem(event.getEntity().getEntityWorld(), event.getEntity().posX, event.getEntity().posY, event.getEntity().posZ, stack);
 
             event.getDrops().add(drop);
         }

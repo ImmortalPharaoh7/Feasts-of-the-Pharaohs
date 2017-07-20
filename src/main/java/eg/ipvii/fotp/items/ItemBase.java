@@ -1,25 +1,25 @@
 package eg.ipvii.fotp.items;
 
+import eg.ipvii.fotp.FotPMod;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import eg.ipvii.fotp.FotPMod;
 
 public class ItemBase extends Item {
 
     protected String name;
 
-    public ItemBase(String name){
+    public ItemBase(String name) {
         this.name = name;
         setUnlocalizedName(name);
         setRegistryName(name);
     }
 
-    public void registerItemModel(){
+    public void registerItemModel() {
         FotPMod.proxy.registerItemRenderer(this, 0, name);
     }
 
     @Override
-    public ItemBase setCreativeTab(CreativeTabs tab){
+    public ItemBase setCreativeTab(CreativeTabs tab) {
         super.setCreativeTab(tab);
         return this;
     }

@@ -16,12 +16,12 @@ public class ItemSeedFoodBase extends ItemSeedFood {
         setRegistryName(name);
     }
 
-    public void registerItemModel(){
+    public void registerItemModel() {
         FotPMod.proxy.registerItemRenderer(this, 0, name);
     }
 
     @Override
-    public ItemSeedFoodBase setCreativeTab(CreativeTabs tab){
+    public ItemSeedFoodBase setCreativeTab(CreativeTabs tab) {
         super.setCreativeTab(tab);
         return this;
     }

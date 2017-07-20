@@ -1,9 +1,6 @@
 package eg.ipvii.fotp.proxy;
 
-import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
-import eg.ipvii.fotp.init.ModBlocks;
-import eg.ipvii.fotp.init.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;

@@ -1,14 +1,12 @@
 package eg.ipvii.fotp.init;
 
 import eg.ipvii.fotp.FotPMod;
-import eg.ipvii.fotp.blocks.*;
+import eg.ipvii.fotp.blocks.BlockBase;
+import eg.ipvii.fotp.blocks.BlockJar;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModBlocks {
@@ -26,19 +24,19 @@ public class ModBlocks {
     public static Block fulqedra;
     public static Block stove;
 
-    public static void register(IForgeRegistry<Block> registry){
+    public static void register(IForgeRegistry<Block> registry) {
         registry.registerAll(
                 mud
         );
     }
 
-    public static void registerItemBlocks(IForgeRegistry<Item> registry){
+    public static void registerItemBlocks(IForgeRegistry<Item> registry) {
         registry.registerAll(
                 mud.createItemBlock()
         );
     }
 
-    public static void registerModels(){
+    public static void registerModels() {
         mud.registerItemModel((ItemBlock) Item.getItemFromBlock(mud));
     }
 }

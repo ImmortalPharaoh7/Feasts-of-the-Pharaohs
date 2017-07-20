@@ -6,7 +6,7 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.potion.PotionEffect;
 
-public class ItemRawPastrami extends ItemFood{
+public class ItemRawPastrami extends ItemFood {
     public ItemRawPastrami() {
         super(2, 0.4F, true);
         setPotionEffect(new PotionEffect(MobEffects.HUNGER, 600, 0), 0.4F);

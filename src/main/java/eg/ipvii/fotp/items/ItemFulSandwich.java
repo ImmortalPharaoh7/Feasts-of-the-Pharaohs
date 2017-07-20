@@ -6,7 +6,7 @@ import net.minecraft.item.ItemFood;
 
 public class ItemFulSandwich extends ItemFood {
 
-    public ItemFulSandwich(){
+    public ItemFulSandwich() {
         super(8, 1F, true);
         setUnlocalizedName(References.FotPItems.FULSANDWICH.getUnlocalizedName());
         setRegistryName(References.FotPItems.FULSANDWICH.getRegistryName());

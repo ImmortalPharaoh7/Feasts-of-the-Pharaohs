@@ -16,7 +16,7 @@ public class ItemSeedsBase extends ItemSeeds {
         setRegistryName(name);
     }
 
-    public void registerItemModel(){
+    public void registerItemModel() {
         FotPMod.proxy.registerItemRenderer(this, 0, name);
     }
 
