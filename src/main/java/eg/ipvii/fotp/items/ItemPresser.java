@@ -6,8 +6,13 @@ import eg.ipvii.fotp.References;
 import net.minecraft.item.ItemStack;
 
 public class ItemPresser extends ItemMod {
-    public ItemPresser() {
-        super(References.FotPItems.PRESSER.getRegistryName());
+
+    protected String name;
+
+
+    public ItemPresser(String name) {
+        super(name);
+        this.name = name;
         setCreativeTab(FotPMod.COMPONENTSTAB);
         this.maxStackSize = 1;
     }

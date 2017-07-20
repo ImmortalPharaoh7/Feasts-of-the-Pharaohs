@@ -13,7 +13,7 @@ public class ModItems {
     public static Item pitabreadk = new ItemMod("pitabread").setCreativeTab(FotPMod.FOODTAB);
     public static Item fulsandwich = new ItemModFood("fulsandwich", 8, 1F, true).setCreativeTab(FotPMod.FOODTAB);
     public static Item beans = new ItemSeedFoodMod("beans", ModBlocks.beanscrop, Blocks.FARMLAND, 6, 0.7F).setCreativeTab(FotPMod.FOODTAB);
-    public static Item rawpastrami;
+    public static Item rawpastrami = new ItemRawPastrami("rawpastrami");
     public static Item pastrami = new ItemModFood("pastrami", 6, 0.6F, true).setCreativeTab(FotPMod.FOODTAB);
     public static Item cumin = new ItemSeedMod("cumin", ModBlocks.cumincrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
     public static Item garlic = new ItemSeedMod("garlic", ModBlocks.garliccrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
@@ -32,7 +32,7 @@ public class ModItems {
     public static Item tomato = new ItemModFood("tomato", 1, 0.5F, false);
     public static Item tomatoseeds = new ItemSeedMod("tomatoseeds", ModBlocks.ricecrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
     public static Item tomatosauce = new ItemMod("tomatosauce").setCreativeTab(FotPMod.FOODTAB);
-    public static Item presser = new ItemPresser();
+    public static Item presser = new ItemPresser("presser");
     public static Item sunfloweroil = new ItemMod("sunfloweroil").setCreativeTab(FotPMod.FOODTAB);
     public static Item parsley = new ItemModFood("parsley", 2, 0.3F, false).setCreativeTab(FotPMod.FOODTAB);
     public static Item parsleyseeds = new ItemSeedMod("parsleyseeds", ModBlocks.parsleycrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);

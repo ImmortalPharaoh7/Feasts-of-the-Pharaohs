@@ -7,8 +7,11 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 
 public class ItemRawPastrami extends ItemModFood {
-    public ItemRawPastrami() {
-        super(References.FotPItems.RAWPASTRAMI.getRegistryName(), 2, 0.4F, true);
+
+    protected String name;
+
+    public ItemRawPastrami(String name) {
+        super(name, 2, 0.4F, true);
         setPotionEffect(new PotionEffect(MobEffects.HUNGER, 600, 0), 0.4F);
         setCreativeTab(FotPMod.FOODTAB);
     }
