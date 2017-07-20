@@ -7,11 +7,11 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
-public class ModItems{
+public class ModItems {
 
     public static ItemBase ful = new ItemBase("ful").setCreativeTab(FotPMod.FOODTAB);
     public static ItemBase pitabreadk = new ItemBase("pitabread").setCreativeTab(FotPMod.FOODTAB);
-    public static ItemFoodBase fulsandwich = new ItemFoodBase("fulsandwich",8, 1F, true).setCreativeTab(FotPMod.FOODTAB);
+    public static ItemFoodBase fulsandwich = new ItemFoodBase("fulsandwich", 8, 1F, true).setCreativeTab(FotPMod.FOODTAB);
     public static ItemSeedFoodBase beans = new ItemSeedFoodBase("beans", 6, 0.7F, (Block) ModBlocks.beanscrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
     public static Item rawpastrami;
     public static ItemFoodBase pastrami = new ItemFoodBase("pastrami", 6, 0.6F, true).setCreativeTab(FotPMod.FOODTAB);
@@ -41,12 +41,13 @@ public class ModItems{
     public static Item falafelsandwich;
     public static Item ladle;
 
-    public static void register(IForgeRegistry<Item> registry){
+    public static void register(IForgeRegistry<Item> registry) {
         registry.registerAll(
                 ful
         );
     }
-    public static void registerModels(){
+
+    public static void registerModels() {
         ful.registerItemModel();
     }
 }

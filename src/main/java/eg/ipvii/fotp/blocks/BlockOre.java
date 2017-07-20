@@ -5,7 +5,7 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockOre extends BlockBase {
     public BlockOre(String name) {
-        super(Material.ROCK, name);
+        super(name, Material.ROCK);
 
         setHardness(3f);
         setResistance(5f);

@@ -8,6 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -15,14 +16,16 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
-
-public class BlockStove extends Block implements ITileEntityProvider{
+public class BlockStove extends Block implements ITileEntityProvider {
     public BlockStove() {
-        super (Material.ROCK);
+        super(Material.ROCK);
         setUnlocalizedName(References.FotPBlocks.STOVE.getUnlocalizedName());
         setRegistryName(References.FotPBlocks.STOVE.getRegistryName());
         setHardness(1);
+    }
+
+    public static boolean isHeated() {
+        return new TileEntityStove().isHeated();
     }
 
     @Override
@@ -35,24 +38,24 @@ public class BlockStove extends Block implements ITileEntityProvider{
         return new TileEntityStove();
     }
 
-    public static boolean isHeated(){
-        return new TileEntityStove().isHeated();
-    }
-
     @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-        if(!worldIn.isRemote){
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+        if (!worldIn.isRemote) {
             TileEntity tileEntity = worldIn.getTileEntity(pos);
-            if(tileEntity instanceof TileEntityStove){
+            if (tileEntity instanceof TileEntityStove) {
                 TileEntityStove stove = (TileEntityStove) tileEntity;
-                if(heldItem != null && heldItem.getItem() == Items.COAL){
-                    if(stove.addCoal()){
-                        heldItem.stackSize--;
-                        return true;
+                ItemStack heldItem = playerIn.getHeldItem(hand);
+                if (heldItem != ItemStack.EMPTY && heldItem.getItem() == Items.COAL) {
+                    int stackSize = heldItem.getCount();
+                    heldItem.setCount(stackSize - 1);
+                    if (heldItem.getCount() == 0) {
+                        playerIn.setItemStackToSlot(hand == EnumHand.MAIN_HAND ? EntityEquipmentSlot.MAINHAND : EntityEquipmentSlot.OFFHAND, ItemStack.EMPTY);
                     }
                 }
                 stove.removeCoal();
             }
-        }return true;
+        }
+        return true;
     }
+
 }

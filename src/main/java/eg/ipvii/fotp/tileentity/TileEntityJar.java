@@ -1,17 +1,11 @@
 package eg.ipvii.fotp.tileentity;
 
-import eg.ipvii.fotp.init.ModItems;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.play.server.SPacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityJar extends TileEntityAddandRemove{
+public class TileEntityJar extends TileEntityAddandRemove {
 
-    public int sandwichcount = 0;
     public final int LIMIT = 4;
+    public int sandwichcount = 0;
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {

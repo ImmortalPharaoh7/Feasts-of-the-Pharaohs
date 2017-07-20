@@ -4,7 +4,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
 public class GrassDropsHandler {
-    public GrassDropsHandler(){
+    public GrassDropsHandler() {
         MinecraftForge.addGrassSeed(new ItemStack(ModItems.beans), 3);
         MinecraftForge.addGrassSeed(new ItemStack(ModItems.cumin), 7);
         MinecraftForge.addGrassSeed(new ItemStack(ModItems.garlic), 5);

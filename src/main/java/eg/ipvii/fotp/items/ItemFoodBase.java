@@ -15,7 +15,7 @@ public class ItemFoodBase extends ItemFood {
         setRegistryName(name);
     }
 
-    public void registerItemModel(){
+    public void registerItemModel() {
         FotPMod.proxy.registerItemRenderer(this, 0, name);
     }
 

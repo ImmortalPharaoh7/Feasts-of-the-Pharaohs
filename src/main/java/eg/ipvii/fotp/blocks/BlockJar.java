@@ -7,8 +7,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
@@ -19,17 +19,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
-import java.util.List;
-
-public class BlockJar extends Block implements ITileEntityProvider{
+public class BlockJar extends Block implements ITileEntityProvider {
 
     //1 / 16 = 0.0625
-    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12,0.0625 * 12, 0.0625 * 12);
-    private static final AxisAlignedBB COLLISION_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12,0.0625 * 11, 0.0625 * 12);
+    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12, 0.0625 * 12, 0.0625 * 12);
+    private static final AxisAlignedBB COLLISION_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12, 0.0625 * 11, 0.0625 * 12);
 
-    public BlockJar(){
-        super (Material.ROCK);
+    public BlockJar() {
+        super(Material.ROCK);
         setUnlocalizedName(References.FotPBlocks.JAR.getUnlocalizedName());
         setRegistryName(References.FotPBlocks.JAR.getRegistryName());
     }
@@ -55,20 +52,20 @@ public class BlockJar extends Block implements ITileEntityProvider{
     }
 
     @Override
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn) {
-        super.addCollisionBoxToList(pos, entityBox, collidingBoxes, COLLISION_BOX);
-    }
-
-    @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
             TileEntity tileEntity = worldIn.getTileEntity(pos);
             if (tileEntity instanceof TileEntityJar) {
                 TileEntityJar jar = (TileEntityJar) tileEntity;
-                if (heldItem != null) {
+                ItemStack heldItem = playerIn.getHeldItem(hand);
+                if (heldItem != ItemStack.EMPTY) {
                     if (heldItem.getItem() == ModItems.fulsandwich) {
-                        if(jar.addFood(jar.sandwichcount, jar.LIMIT)){
-                            heldItem.stackSize--;
+                        if (jar.addFood(jar.sandwichcount, jar.LIMIT)) {
+                            int stackSize = heldItem.getCount();
+                            heldItem.setCount(stackSize - 1);
+                            if (heldItem.getCount() == 0) {
+                                playerIn.setItemStackToSlot(hand == EnumHand.MAIN_HAND ? EntityEquipmentSlot.MAINHAND : EntityEquipmentSlot.OFFHAND, ItemStack.EMPTY);
+                            }
                             return true;
                         }
                     }

@@ -5,8 +5,8 @@ import eg.ipvii.fotp.init.ModItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class BlockCropCumin extends BlockCrops{
-    public BlockCropCumin(){
+public class BlockCropCumin extends BlockCrops {
+    public BlockCropCumin() {
         setUnlocalizedName(References.FotPBlocks.CUMMINCROP.getUnlocalizedName());
         setRegistryName(References.FotPBlocks.CUMMINCROP.getRegistryName());
     }
