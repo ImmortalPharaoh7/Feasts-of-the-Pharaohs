@@ -1,10 +1,10 @@
 package eg.ipvii.fotp.tileentity;
 
+import com.teamwizardry.librarianlib.features.base.block.TileMod;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 
-public abstract class TileEntityAddandRemove extends TileEntity {
+public abstract class TileEntityAddandRemove extends TileMod {
     public boolean addFood(int foodcount, int limit) {
         if (foodcount < limit) {
             foodcount++;

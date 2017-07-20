@@ -1,13 +1,12 @@
 package eg.ipvii.fotp.items;
 
+import com.teamwizardry.librarianlib.features.base.item.ItemMod;
 import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
-import net.minecraft.item.Item;
 
-public class ItemMudBall extends Item {
+public class ItemMudBall extends ItemMod {
     public ItemMudBall() {
-        setUnlocalizedName(References.FotPItems.MUDBALL.getUnlocalizedName());
-        setRegistryName(References.FotPItems.MUDBALL.getRegistryName());
+        super(References.FotPItems.MUDBALL.getRegistryName());
         setCreativeTab(FotPMod.COMPONENTSTAB);
     }
 }

@@ -1,16 +1,15 @@
 package eg.ipvii.fotp;
 
+import com.teamwizardry.librarianlib.features.base.ModCreativeTab;
 import eg.ipvii.fotp.init.ModBlocks;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
-public class EgyptianToolsTab extends CreativeTabs {
-    public EgyptianToolsTab() {
-        super("tabEgyptianTools");
-    }
+public class EgyptianToolsTab extends ModCreativeTab {
 
+    @NotNull
     @Override
-    public ItemStack getTabIconItem() {
+    public ItemStack getIconStack() {
         return new ItemStack(ModBlocks.fulqedra);
     }
 }

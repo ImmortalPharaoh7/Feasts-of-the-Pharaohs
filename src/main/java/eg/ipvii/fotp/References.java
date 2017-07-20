@@ -1,7 +1,7 @@
 package eg.ipvii.fotp;
 
 public class References {
-    public static final String MOD_ID = "FotP";
+    public static final String MOD_ID = "fotp";
     public static final String NAME = "Feast of the Pharaohs";
     public static final String VERSION = "0.2.0";
     public static final String ACCEPTED_MC_VERSIONS = "[1.10.2]";

@@ -1,14 +1,12 @@
 package eg.ipvii.fotp.items;
 
+import com.teamwizardry.librarianlib.features.base.item.ItemModFood;
 import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
-import net.minecraft.item.ItemFood;
 
-public class ItemFalafel extends ItemFood {
+public class ItemFalafel extends ItemModFood {
     public ItemFalafel() {
-        super(4, 0.5F, false);
-        setUnlocalizedName(References.FotPItems.FALAFEL.getUnlocalizedName());
-        setRegistryName(References.FotPItems.FALAFEL.getRegistryName());
+        super(References.FotPItems.FALAFEL.getRegistryName(),4, 0.5F, false);
         setCreativeTab(FotPMod.FOODTAB);
     }
 }

@@ -4,11 +4,10 @@ import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
 import eg.ipvii.fotp.init.ModBlocks;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemSeeds;
 
-public class ItemTomatoSeeds extends ItemSeeds {
+public class ItemTomatoSeeds extends ItemSeedMod {
     public ItemTomatoSeeds() {
-        super(ModBlocks.tomatocrop, Blocks.FARMLAND);
+        super(References.FotPItems.TOMATOSEEDS.getRegistryName(), ModBlocks.tomatocrop, Blocks.FARMLAND);
         setUnlocalizedName(References.FotPItems.TOMATOSEEDS.getUnlocalizedName());
         setRegistryName(References.FotPItems.TOMATOSEEDS.getRegistryName());
         setCreativeTab(FotPMod.FOODTAB);

@@ -1,14 +1,13 @@
 package eg.ipvii.fotp.items;
 
+import com.teamwizardry.librarianlib.features.base.item.ItemMod;
 import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.References;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemPresser extends Item {
+public class ItemPresser extends ItemMod {
     public ItemPresser() {
-        setUnlocalizedName(References.FotPItems.PRESSER.getUnlocalizedName());
-        setRegistryName(References.FotPItems.PRESSER.getRegistryName());
+        super(References.FotPItems.PRESSER.getRegistryName());
         setCreativeTab(FotPMod.COMPONENTSTAB);
         this.maxStackSize = 1;
     }
