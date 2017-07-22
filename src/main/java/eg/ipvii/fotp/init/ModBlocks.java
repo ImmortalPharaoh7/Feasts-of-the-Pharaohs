@@ -4,21 +4,22 @@ import com.teamwizardry.librarianlib.features.base.block.BlockMod;
 import eg.ipvii.fotp.FotPMod;
 import eg.ipvii.fotp.blocks.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockCrops;
 import net.minecraft.block.material.Material;
 
 public class ModBlocks {
 
     public static Block mud = new BlockMod("mud", Material.CLAY).setCreativeTab(FotPMod.COMPONENTSTAB);
-    public static BlockJar jar = new BlockJar();
-    public static BlockCropBeans beanscrop = new BlockCropBeans();
-    public static BlockCropCumin cumincrop = new BlockCropCumin();
-    public static BlockCropGarlic garliccrop = new BlockCropGarlic();
-    public static BlockCropRedPepper redpeppercrop = new BlockCropRedPepper();
-    public static BlockCropOkra okracrop = new BlockCropOkra();
-    public static BlockCropRice ricecrop = new BlockCropRice();
-    public static BlockCropTomato tomatocrop = new BlockCropTomato();
-    public static BlockCropParsley parsleycrop = new BlockCropParsley();
-    public static BlockFulQedra fulqedra = new BlockFulQedra();
-    public static BlockStove stove = new BlockStove();
+    public static BlockJar jar = new BlockJar("jar");
+    public static BlockCrops beanscrop = new BlockCropBeans("blockcropbeans");
+    public static BlockCrops cumincrop = new BlockCropCumin("blockcropcumin");
+    public static BlockCrops garliccrop = new BlockCropGarlic("blockcropgarlic");
+    public static BlockCrops redpeppercrop = new BlockCropRedPepper("blockcropredpepper");
+    public static BlockCrops okracrop = new BlockCropOkra("blockcropokra");
+    public static BlockCrops ricecrop = new BlockCropRice("blockcroprice");
+    public static BlockCrops tomatocrop = new BlockCropTomato("blockcroptomato");
+    public static BlockCrops parsleycrop = new BlockCropParsley("blockcropparsley");
+    public static Block fulqedra = new BlockFulQedra();
+    public static Block stove = new BlockStove("stove");
 
 }

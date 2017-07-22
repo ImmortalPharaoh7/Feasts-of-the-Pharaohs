@@ -30,7 +30,7 @@ public class ModItems {
     public static Item riceseeds = new ItemSeedMod("riceseeds", ModBlocks.ricecrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
     public static Item paprikapowder = new ItemMod("paprikapowder").setCreativeTab(FotPMod.FOODTAB);
     public static Item tomato = new ItemModFood("tomato", 1, 0.5F, false);
-    public static Item tomatoseeds = new ItemSeedMod("tomatoseeds", ModBlocks.ricecrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
+    public static Item tomatoseeds = new ItemSeedMod("tomatoseeds", ModBlocks.tomatocrop, Blocks.FARMLAND).setCreativeTab(FotPMod.FOODTAB);
     public static Item tomatosauce = new ItemMod("tomatosauce").setCreativeTab(FotPMod.FOODTAB);
     public static Item presser = new ItemPresser("presser");
     public static Item sunfloweroil = new ItemMod("sunfloweroil").setCreativeTab(FotPMod.FOODTAB);

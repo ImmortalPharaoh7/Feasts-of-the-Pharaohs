@@ -21,11 +21,13 @@ import net.minecraft.world.World;
 public class BlockJar extends BlockModContainer {
 
     //1 / 16 = 0.0625
+    protected String name;
     private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12, 0.0625 * 12, 0.0625 * 12);
     private static final AxisAlignedBB COLLISION_BOX = new AxisAlignedBB(0.0625 * 4, 0, 0.0625 * 4, 0.0625 * 12, 0.0625 * 11, 0.0625 * 12);
 
-    public BlockJar() {
-        super(References.FotPBlocks.JAR.getRegistryName(), Material.ROCK);
+    public BlockJar(String name) {
+        super(name, Material.ROCK);
+        this.name = name;
     }
 
     @Override

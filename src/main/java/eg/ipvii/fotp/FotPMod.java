@@ -33,7 +33,7 @@ public class FotPMod {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
-        ModCrafting.register();
+//        ModCrafting.register();
 
 //        GameRegistry.registerTileEntity(TileEntityJar.class, References.MOD_ID + "TileEntityJar");
 //        GameRegistry.registerTileEntity(TileEntityFulQedra.class, References.MOD_ID + "TileEntityFulQedra");

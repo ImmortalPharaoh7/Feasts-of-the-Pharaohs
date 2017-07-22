@@ -16,8 +16,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class BlockStove extends BlockModContainer {
-    public BlockStove() {
-        super(References.FotPBlocks.STOVE.getRegistryName(), Material.ROCK);
+
+    protected String name;
+
+    public BlockStove(String name) {
+        super(name, Material.ROCK);
+        this.name = name;
         setHardness(1);
     }
 
