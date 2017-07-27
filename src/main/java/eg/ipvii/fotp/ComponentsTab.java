@@ -12,4 +12,9 @@ public class ComponentsTab extends ModCreativeTab {
     public ItemStack getIconStack() {
         return new ItemStack(ModItems.mudball); // idk about egypt, dude, but here we don't use mudballs as a component in our foods.
     }
+
+    @Override
+    public ItemStack getTabIconItem() {
+        return new ItemStack(ModItems.mudball);
+    }
 }

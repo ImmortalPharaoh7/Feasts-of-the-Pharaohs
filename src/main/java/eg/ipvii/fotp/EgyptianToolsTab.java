@@ -12,4 +12,9 @@ public class EgyptianToolsTab extends ModCreativeTab {
     public ItemStack getIconStack() {
         return new ItemStack(ModBlocks.fulqedra);
     }
+
+    @Override
+    public ItemStack getTabIconItem() {
+        return new ItemStack(ModBlocks.fulqedra);
+    }
 }

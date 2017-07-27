@@ -16,4 +16,9 @@ public class FoodTab extends ModCreativeTab {
     public ItemStack getIconStack() {
         return new ItemStack(ModItems.fulsandwich);
     }
+
+    @Override
+    public ItemStack getTabIconItem() {
+        return new ItemStack(ModItems.fulsandwich);
+    }
 }
