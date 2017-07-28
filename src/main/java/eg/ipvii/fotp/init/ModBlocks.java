@@ -9,7 +9,7 @@ import net.minecraft.block.material.Material;
 
 public class ModBlocks {
 
-    public static Block mud = new BlockMod("mud", Material.CLAY).setCreativeTab(FotPMod.COMPONENTSTAB);
+    public static Block mud = new BlockMod("mud", Material.CLAY).setCreativeTab(FotPMod.FotPCreativeTab);
     public static BlockJar jar = new BlockJar("jar");
     public static BlockCrops beanscrop = new BlockCropBeans("blockcropbeans");
     public static BlockCrops cumincrop = new BlockCropCumin("blockcropcumin");

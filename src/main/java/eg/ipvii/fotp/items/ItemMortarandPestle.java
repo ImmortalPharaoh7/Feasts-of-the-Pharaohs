@@ -11,7 +11,7 @@ public class ItemMortarandPestle extends ItemMod {
     public ItemMortarandPestle(String name) {
         super(name);
         this.name = name;
-        setCreativeTab(FotPMod.COMPONENTSTAB);
+        setCreativeTab(FotPMod.FotPCreativeTab);
         this.maxStackSize = 1;
     }
 

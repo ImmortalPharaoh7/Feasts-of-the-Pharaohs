@@ -18,7 +18,7 @@ public class ItemOkra extends ItemMod {
     public ItemOkra(String name) {
         super(name);
         this.name = name;
-        setCreativeTab(FotPMod.FOODTAB);
+        setCreativeTab(FotPMod.FotPCreativeTab);
     }
 
     @Override

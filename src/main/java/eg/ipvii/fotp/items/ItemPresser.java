@@ -13,7 +13,7 @@ public class ItemPresser extends ItemMod {
     public ItemPresser(String name) {
         super(name);
         this.name = name;
-        setCreativeTab(FotPMod.COMPONENTSTAB);
+        setCreativeTab(FotPMod.FotPCreativeTab);
         this.maxStackSize = 1;
     }
 

@@ -15,9 +15,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = References.MOD_ID, name = References.NAME, version = References.VERSION, acceptedMinecraftVersions = References.ACCEPTED_MC_VERSIONS)
 public class FotPMod {
 
-    public static final CreativeTabs FOODTAB = new FoodTab();
-    public static final CreativeTabs COMPONENTSTAB = new ComponentsTab();
-    public static final CreativeTabs EGYTPIANTOOLSTAB = new EgyptianToolsTab();
+    public static final CreativeTabs FotPCreativeTab = new FotPCreativeTab();
+
     @Mod.Instance(References.MOD_ID)
     public static FotPMod instance;
     @SidedProxy(serverSide = References.SERVER_PROXY_CLASS, clientSide = References.CLIENT_PROXY_CLASS)
